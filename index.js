@@ -25,7 +25,7 @@ async function getBunnies() {
         console.log(results);
         if (!results || results.length <= 0) throw new Error('Results not found on page.');
         console.debug(`✅ => Smoke test passed`);
-        browser.close();
+        await browser.close();
         process.exitCode = 0;
     } catch (err) {
         console.error(`❌ => Smoke test NOT passed`);
