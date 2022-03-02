@@ -1,19 +1,20 @@
 {
-  "name": "puppeteer-sample",
-  "version": "1.0.0",
-  "description": "A puppeteer sample project to learn about the tool",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "keywords": [
-    "test",
-    "smoke-test",
-    "puppeteer"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "puppeteer": "^13.4.1"
-  }
+    "name": "puppeteer-sample",
+    "version": "1.0.0",
+    "description": "A puppeteer sample project to learn about the tool",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "test"
+    },
+    "keywords": [
+        "test",
+        "smoke-test",
+        "puppeteer"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "puppeteer": "^13.4.1"
+    }
 }
