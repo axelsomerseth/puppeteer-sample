@@ -1,8 +1,8 @@
 const puppeteer = require('puppeteer');
 
-async function getBunnies() {
+async function smokeTest() {
     try {
-        const url = 'https://news.ycombinator.com/';
+        const url = 'https://news.ycombinator.com/x';
         const browser = await puppeteer.launch({
             headless: true, // change to false to run visualizing the web browser
             defaultViewport: null,
@@ -26,12 +26,13 @@ async function getBunnies() {
         if (!results || results.length <= 0) throw new Error('Results not found on page.');
         console.debug(`✅ => Smoke test passed`);
         await browser.close();
-        process.exitCode = 0;
+        // process.exitCode = 0;
+        process.exit(0);
     } catch (err) {
-        console.error(`❌ => Smoke test NOT passed`);
-        process.exitCode = 1;
-        throw err;
+        console.error(`❌ => Smoke test NOT passed: `, err);
+        // process.exitCode = 1;
+        process.exit(1);
     }
 };
 
-getBunnies();
+smokeTest();
